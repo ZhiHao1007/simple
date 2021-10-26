@@ -1,0 +1,179 @@
+
+*{
+  box-sizing: border-box;
+}
+
+/* header */
+header {
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  width: 1200px;
+}
+
+/* 導覽列 */
+nav.title {
+  /* border: 1px solid #CF9F72; */
+  background: #bda68c;
+  width: 1200px;
+  /* height: 100px; */
+  /* position: fixed; */
+  margin: 0 auto;
+  /* position: relative; */
+}
+nav.title ul {
+  /* margin: 0; */
+  font-size: 0;
+  /* height: 80px; */
+  padding: 15px;
+  padding-left: 50px;
+  /* line-height: 100px; */
+  /* position: absolute;
+  top:50%;
+  transform: translateY(-20%); */
+}
+
+nav.title li {
+  list-style: none; /* 移除項目符號 */
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0;
+  padding-right: 15px;
+}
+
+nav.title  a {
+  color: inherit; /* 移除超連結顏色 */
+  text-decoration: none; /* 移除超連結底線 */
+  display: inline-block; /* 讓 <a> 填滿 <li> */
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px;
+  
+  /* color: #184474; */
+}
+
+/* LOGO */
+/* li.logo{ 
+  /* margin-right: 250px; */
+  /* display: inline-block; 
+  
+}*/
+
+
+nav.title a.logo {
+  margin: 0 auto;
+  /* display: inline-block; */
+  margin-right: 300px;
+  /* position: relative; */
+}
+
+a.logo img {
+  width: 200px;
+  height: 50px;
+  /* position: absolute;
+  top:50%;
+  transform: translateY(-50%); */
+}
+
+/* search圖示 */
+div.srch {
+  width: 100px;
+  position: relative;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+div.srch_img span.icon {
+  /* border: 1px solid blue; */
+  margin-left: 80px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-46%);
+  z-index: 1;
+}
+
+input#search {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100px;
+}
+
+/* 會員 購物車 */
+a.vector img {
+  width: 20px;
+  height: 20px;
+}
+
+a.shop img {
+  width: 20px;
+  height: 20px;
+}
+
+a.vector {
+  padding-right: 10px;
+}
+
+li.vs {
+  margin-top: 5px;
+  /* float: right; */
+}
+
+/* 下拉選單 */
+div.menu {
+  /* border: 1px solid blue; */
+  position: relative;
+}
+
+div.menu ul.menu_list {
+  /* border: 1px solid black; */
+  padding: 0;
+  /* margin-top: 10px; */
+  list-style: none;
+
+  position: absolute;
+  top: 100%;
+  display: none;
+}
+
+div.menu li {
+  font-size: 0;
+  padding: 0;
+  width: 50px;
+}
+
+div.menu hr {
+  width: 50%;
+}
+
+div.menu a.menu_list {
+  /* border: 1px solid red; */
+  width: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+/* 導覽列變色 */
+nav.title a.logo:hover{
+  border: none;
+}
+
+nav.title a:hover {
+  color: white;
+  /* text-decoration:underline; */
+  border-bottom:2px solid white;
+}
+
+
+
+div.menu:hover ul.menu_list {
+  background-color: rgb(255, 255, 255);
+  color: gray;
+  display: block;
+}
+
+a.menu_list:hover {
+  background-color: rgb(135, 100, 100, 0.8);
+}
+

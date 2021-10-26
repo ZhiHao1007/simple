@@ -1,0 +1,58 @@
+/* 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* font-family: 'Noto Sans TC', sans-serif; 
+} 
+*/
+
+/* footer */
+footer {
+  /* border:1px solid red; */
+  background: #bda68c;
+  width: 1200px;
+  height: 280px;
+  margin: 0 auto;
+}
+
+footer div.end {
+  /* border:1px solid blue; */
+  text-align: center;
+  /* height: 200px; */
+  /* margin-top: 40px; */
+}
+
+div.end img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+div.end a {
+  /* border:1px solid green; */
+  color: inherit; /* 移除超連結顏色 */
+  text-decoration: none; /* 移除超連結底線 */
+  font-size: 16px;
+  margin-right: 10px;
+  margin-left: 10px;
+  /* font-weight: bold; */
+
+}
+
+div.end hr {
+  margin-top: 30px;
+  width: 800px;
+  border: none;
+  height: 1px;
+  background-color: rgb(117, 117, 115);
+}
+
+div.end p {
+  white-space: pre-line;
+  margin: 8px;
+  font-size: 14px;
+}
