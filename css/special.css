@@ -7,6 +7,14 @@ body {
   /* font-family: 'Noto Sans TC', sans-serif; */
 }
 
+header > nav.title > ul > li:nth-child(4) > a {
+  /* border: 2px solid rgb(117, 61, 23); */
+  border-radius: 5px;
+  background-color: rgb(135, 100, 100, 0.5);
+  color: white;
+}
+
+
 /* main */
 div.main {
   /* border: 1px solid red; */

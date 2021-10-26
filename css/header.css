@@ -162,7 +162,7 @@ nav.title a.logo:hover{
 nav.title a:hover {
   color: white;
   /* text-decoration:underline; */
-  border-bottom:2px solid white;
+  /* border-bottom:1px solid white; */
 }
 
 
