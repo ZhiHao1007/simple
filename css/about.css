@@ -201,7 +201,8 @@ div.about3 span {
 /* about_sq */
 div.sq{
   /* border: 1px solid black;  */
-  margin: 40px 100px;
+  margin: 50px 100px;
+  margin-bottom: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
