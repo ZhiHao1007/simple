@@ -467,4 +467,11 @@ div.commodity_1 > a.next2 > img{
   cursor: pointer;
 }
 
+/* 按鈕特效 */
+input#more:hover{
+  background-color: rgb(189, 164, 143, 0.5);
+  color: black;
+}
+
+
 /* end */

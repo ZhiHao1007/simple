@@ -179,3 +179,9 @@ div.sp2_text input {
   right: 20px;
   bottom: 10px;
 }
+
+/* 按鈕特效 */
+input#more:hover{
+  background-color: rgb(189, 164, 143, 0.5);
+  color: black;
+}

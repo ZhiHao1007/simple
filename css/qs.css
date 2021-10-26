@@ -211,3 +211,10 @@ div.message ul{
 div.message > ul > li{
 	margin: 10px;
 }
+
+/* 按鈕特效 */
+#more:hover{
+	background-color: rgb(189, 164, 143, 0.5);
+	color: black;
+  }
+  
