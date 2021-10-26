@@ -19,6 +19,7 @@ div.banner{
 	background-image: url("../images/space/banner.png") ;
 	width: 1200px;
 	height: 350px;
+	border-radius: 0 0 10px 10px;
 	margin: 0 auto;
 	position: relative;
 	z-index: -1;

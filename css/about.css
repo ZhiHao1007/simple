@@ -19,6 +19,7 @@ div.main {
 div.banner1 {
   width: 1200px;
   height: 350px;
+  border-radius: 0 0 10px 10px;
   background: url("../images/about/banner1.png");
   margin:0 auto;
   /* position: fixed; */
