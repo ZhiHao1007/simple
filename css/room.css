@@ -22,6 +22,7 @@ div.banner_text p{
 	color: white;
 	font-size: 32px;
 	font-weight: bold;
+	text-decoration:underline;
 	text-align: center;
 	/* text-decoration:underline; */
 	z-index: 1;
@@ -35,12 +36,13 @@ div.banner_text p{
 div.banner_text span{
 	/* color: white; */
 	font-size: 20px;
+	color: rgb(255, 255, 255);
 	font-weight: bold;
 	white-space: pre-line;
 	text-align: center;
 	z-index: 1;
 	position: absolute;
-	right:80px;
+	right:55px;
 	bottom: 60px;
 }
 

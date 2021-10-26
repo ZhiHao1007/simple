@@ -29,7 +29,7 @@ div.banner_text p{
 	font-size: 32px;
 	color: white;
 	font-weight: bold;
-
+	text-decoration:underline;
 	position: absolute;
 	top: 50%;
 	left: 12%;
