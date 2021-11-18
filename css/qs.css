@@ -24,7 +24,7 @@ nav.title1 > ul > li > div.menu_1 > a.test:hover{
 
 /* main */
 div.main {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   max-width: 1680px;
   margin: 0 auto;
@@ -76,7 +76,7 @@ ul.FAQ > li > a > h5 {
 
 /* 問題 */
 div.pr{
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   width: 80%;
   margin: 0 auto;
 }
@@ -115,6 +115,13 @@ div > dt > button {
   cursor: pointer;
   position: relative;
 }
+
+@media (max-width:767.98px) {
+  div > dt > button {
+    font-size: 16px;
+  }
+}
+
 
 /* 解答 */
 div.pr1_a {
