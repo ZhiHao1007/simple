@@ -6,7 +6,7 @@ $(document).ready(function () {
   $(window).on("scroll", function () {
     var wn = $(window).scrollTop();
     if (wn > 0) {
-      $(".title").css("background", "rgba(189,166,140,0.3)");
+      $(".title").css("background", "rgba(189,166,140,0.85)");
     } else {
       $(".title").css("background", "rgba(189,166,140)");
     }
@@ -29,7 +29,7 @@ $(document).ready(function () {
   $(window).on("scroll", function () {
     var wn = $(window).scrollTop();
     if (wn > 0) {
-      $(".title1").css("background", "rgba(189,166,140,0.3)");
+      $(".title1").css("background", "rgba(189,166,140,0.85)");
     } else {
       $(".title1").css("background", "rgba(189,166,140)");
     }
