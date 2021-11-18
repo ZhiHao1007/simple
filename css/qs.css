@@ -7,25 +7,44 @@ body {
   /* font-family: 'Noto Sans TC', sans-serif; */
 }
 
-header > nav.title > ul > li:nth-child(5) > a {
+header > nav.title > ul > li:nth-child(4) > a {
   /* border: 2px solid rgb(117, 61, 23); */
   border-radius: 5px;
   background-color: rgb(135, 100, 100, 0.5);
   color: white;
 }
 
+nav.title1 > ul > li:nth-child(4) > a{
+  background-color: rgb(250, 242, 214);
+}
+
+nav.title1 > ul > li > div.menu_1 > a.test:hover{
+  background-color: rgb(250, 242, 214);
+}
+
 /* main */
 div.main {
-  /* border: 1px solid red; */
-  width: 1200px;
+  border: 1px solid red;
+  width: 100%;
+  max-width: 1680px;
   margin: 0 auto;
 }
+
+
+div.qs_icon{
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+}
+
 
 /* ul.FAQ  問答SVG*/
 ul.FAQ {
   /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
   font-size: 0;
-  text-align: center;
+  
   margin-top: 100px;
   margin-bottom: 50px;
 }
@@ -36,11 +55,11 @@ ul.FAQ img {
   /* border:1px solid gray; */
 }
 
-ul.FAQ li {
+ul.FAQ  > li {
   list-style: none; /* 移除項目符號 */
   display: inline-block;
-  vertical-align: middle;
-  margin-right: 100px;
+  /* margin-right: 100px; */
+  margin: 10px 50px;
 }
 
 ul.FAQ > li > a {
@@ -56,18 +75,23 @@ ul.FAQ > li > a > h5 {
 }
 
 /* 問題 */
+div.pr{
+  border: 1px solid orange;
+  width: 80%;
+  margin: 0 auto;
+}
 div.pr h4 {
   /* border: 1px solid gray; */
   font-size: 18px;
   font-weight: bold;
-  width: 800px;
+  width: 70%;
   margin: 0 auto;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 div.pr1 {
   /* border: 1px solid blue; */
-  width: 800px;
+  /* width: 70%; */
   margin: 0 auto;
   text-align: center;
 }
@@ -78,11 +102,13 @@ div > dt {
 
 div > dt > button {
   background-color: rgb(228, 202, 178);
-  width: 800px;
+  width: 70%;
   /* border: none; */
   border: 1px solid gray;
-  display: inline-block;
+  display: flex;
   text-align: left;
+  margin: 0 auto;
+  /* margin-bottom: 10px; */
   padding: 20px;
   font-size: 18px;
   font-weight: bold;
@@ -92,28 +118,27 @@ div > dt > button {
 
 /* 解答 */
 div.pr1_a {
-  border: 1px solid gray;
-  width: 800px;
+  /* border: 1px solid gray; */
+  width: 70%;
   margin: 0 auto;
+  max-height: 0;
+  overflow: hidden;
   padding: 10px 40px;
   text-align: left;
   letter-spacing: 1.5px;
-  /* max-height: 0; */
-  /* overflow: hidden; */
+  
   /* transition: max-height 0.2s ease-out; */
   /* background-color: white; */
 }
 
-/* div > dt > div.pr1_a > p{
-  color: #474747;
-  font-size: 16px;
-  letter-spacing: 1.5px;
-  /* font-weight: 400; */
-/* text-align: left;
-} */
+div.pr1_a.-on {
+  max-width: 200px;
+}
+
 
 /* 加號 */
-div > dl > div > dt > button.coll::after {
+
+/* div > dl > div > dt > button.coll::after {
   content: "\002B";
   color: rgba(20, 20, 20, 0.4);
   margin-left: 5px;
@@ -121,23 +146,54 @@ div > dl > div > dt > button.coll::after {
   position: absolute;
   right: 10px;
   bottom: 10px;
+} */
+
+div > dl > div > dt > button > div.add{
+  /* float: right; */
+  position: absolute;
+  right: 15px;
 }
 
-/* div > dl > div > dt > button.coll.active:after {
-  content: "\2212";
-} */
+div > dl > div > dt > button > div.sub{
+  /* float: right; */
+  position: absolute;
+  right: 15px;
+  display: none;
+}
+
+div.add.-on{
+  display: none;
+}
+
+div.sub.-on{
+  display: block;
+}
+
+
+
 
 /* 分隔線 */
 div.main hr {
-  width: 1000px;
+  width:80%;
   margin: 40px auto;
 }
 
+
 /* 表單 */
-div.form {
+div.speak{
   border: 2px solid rgb(219, 207, 194);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 150px;
+}
+
+
+div.form {
+  border: 1px solid green;
   border-radius: 10px;
-  width: 800px;
+  width: 40%;
+  text-align: left;
   margin: 0 auto;
   margin-bottom: 50px;
   position: relative;
@@ -148,17 +204,18 @@ div.form h3 {
   text-align: center;
 }
 
-div > form {
-  /* border: 1px solid green; */
+div.form > form {
+  border: 1px solid black;
   /* height: 200px; */
   display: inline-block;
-  width: 400px;
-  padding-left: 100px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 40px;
 }
 
-div > form > label {
+div.form > form > label {
   /* border: 1px solid orange; */
-  width: 180px;
+  width: 80%;
   display: block;
   font-size: 16px;
   margin: 10px;
@@ -166,25 +223,28 @@ div > form > label {
   font-weight: bold;
 }
 
-div > form > input {
+div.form > form > input {
+  width: 80%;
+  min-width: 100px;
   height: 30px;
   margin-left: 10px;
   border: 1px solid rgb(212, 168, 126);
 }
 
-div > form > textarea {
+div.form > form > textarea {
   border: 1px solid rgb(212, 168, 126);
+  width: 80%;
   height: 100px;
   margin-left: 10px;
   margin-bottom: 20px;
   display: block;
   box-sizing: border-box;
-  max-width: 170px;
-  max-height: 170px;
+  /* max-width: 170px;
+  max-height: 170px; */
   /* border-radius:10px; */
 }
 
-div > form > button {
+div.form > form > button {
   width: 100px;
   background-color: white;
   border: none;
@@ -196,16 +256,24 @@ div > form > button {
   cursor: pointer;
 }
 
+@media (max-width:991px) {
+  div.form {
+    width: 70%;
+  }
+}
+
 /* message 聯絡資訊 */
 
 div.message {
   border: 1px solid rgb(212, 168, 126);
-  display: inline-block;
-  margin-left: 40px;
+  /* display: inline-block; */
+  width: 30%;
+  /* margin-left: 40px; */
+  margin-right: 50px;
   padding-right: 20px;
   padding-bottom: 20px;
-  position: absolute;
-  top: 30%;
+  /* position: absolute;
+  top: 30%; */
 }
 
 div.message h4 {

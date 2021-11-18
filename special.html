@@ -3,58 +3,122 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
 	<title>Simple｜風格靈感</title>
 	<link href="./css/header.css" rel="stylesheet">
+	<link href="./css/hamburger.css" rel="stylesheet">
 	<link href="./css/breadcrumb.css" rel="stylesheet">
 	<link href="./css/footer.css" rel="stylesheet">
+
 	<link href="./css/special.css" rel="stylesheet">
+
 	<script src="https://kit.fontawesome.com/c9d50d5c1a.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+	<script src="./js/header.js"></script>
 </head>
 
 <body>
 	<header>
 		<nav class="title">
-			<ul>
-				<li class="logo">
-					<a href="./index.html" class="logo"><img src="./images/index/logo1.png" alt="LOGO"></a>
-				</li>
-				<li><a href="./about.html">關於我們</a></li>
-				<li>
-					<div class="menu">
-						<a href="./room.html">空間</a>
-						<ul class="menu_list">
-							<li>
-								<a href="./room.html" class="menu_list">客廳</a>
-							</li>
-							<hr class="hr1">
-							<li>
-								<a href="./room.html" class="menu_list">臥室</a>
-							</li>
-							<hr class="hr1">
-							<li>
-								<a href="./room.html" class="menu_list">廚房</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-
-				<li><a href="./special.html">風格靈感</a></li>
-				<li><a href="./qs.html">常見問題</a></li>
-				<li>
-					<div class="srch">
-						<div class="srch_img">
-							<span class="icon"><img src="./images/index/search.png" alt=""></span>
-							<input type="search" id="search" placeholder="Search">
-						</div>
-					</div>
-				</li>
-				<li class="vs">
-					<a href="#" class="vector"><img src="./images/index/vector.png" alt="vector"></a>
-					<a href="#" class="shop"><img src="./images/index/shop.png" alt="shop"></a>
-				</li>
-			</ul>
+		  <div class="logo">
+			<a href="./index.html" class="logo"><img src="./images/index/logo1.png" alt="LOGO"></a>
+		  </div>
+		  <ul class="nav">
+			<li><a href="./about.html">關於我們</a></li>
+			<li>
+			  <div class="menu">
+				<a>
+				  空間
+				  <i class="fas fa-chevron-down" style="margin-left: 5px; font-size: 18px;"></i>
+				  <i class="fas fa-chevron-up" style="margin-left: 5px; font-size: 18px;"></i>
+				</a>
+				<ul class="menu_list">
+				  <li>
+					<a href="./room.html" class="menu_list1">客廳</a>
+				  </li>
+				  <hr class="hr1">
+				  <li>
+					<a href="./room.html" class="menu_list1">臥室</a>
+				  </li>
+				  <hr class="hr1">
+				  <li>
+					<a href="./room.html" class="menu_list1">廚房</a>
+				  </li>
+				</ul>
+			  </div>
+			</li>
+	
+			<li><a href="./special.html">風格靈感</a></li>
+			<li><a href="./qs.html">常見問題</a></li>
+			<li>
+			  <div class="srch">
+				<div class="srch_img">
+				  <span class="icon"><img src="./images/index/search.png" alt=""></span>
+				  <input type="search" id="search" placeholder="Search">
+				</div>
+			  </div>
+			</li>
+			<li class="vs">
+			  <a href="#" class="vector"><img src="./images/index/vector.png" alt="vector"></a>
+			  <a href="#" class="shop"><img src="./images/index/shop.png" alt="shop"></a>
+			</li>
+		  </ul>
 		</nav>
-	</header>
+	
+		<nav class="title1">
+	
+		  <div class="logo1">
+			<a href="./index.html" class="logo1"><img src="./images/index/logo1.png" alt="LOGO"></a>
+		  </div>
+	
+		  <div class="srch1">
+			<div class="srch1_img">
+			  <span class="icon"><img src="./images/index/search.png" alt=""></span>
+			  <input type="search" id="search" placeholder="Search">
+			</div>
+		  </div>
+	
+		  <div class="icon_m">
+			<a href="#" class="vector1"><img src="./images/index/vector.png" alt="vector"></a>
+			<a href="#" class="shop1"><img src="./images/index/shop.png" alt="shop"></a>
+		  </div>
+	  
+		  <button class="hamburger hamburger--spring" type="button">
+			<span class="hamburger-box">
+			  <span class="hamburger-inner"></span>
+			</span>
+		  </button>
+	
+		  <ul class="menu1">
+			<li><a href="./about.html">關於我們</a></li>
+			<li>
+			  <div class="menu_1">
+				<a class="test">
+				  空間
+				  <i class="fas fa-chevron-down" style="margin-left: 5px;"></i>
+				  <i class="fas fa-chevron-up" style="margin-left: 5px; font-size: 18px;"></i>
+				</a>
+				<ul class="menu_list_1">
+				  <li>
+					<a href="./room.html" class="menu_list">客廳</a>
+				  </li>
+				  <li>
+					<a href="./room.html" class="menu_list">臥室</a>
+				  </li>
+				  <li>
+					<a href="./room.html" class="menu_list">廚房</a>
+				  </li>
+				</ul>
+			  </div>
+			</li>
+			<li><a href="./special.html">風格靈感</a></li>
+			<li><a href="./qs.html">常見問題</a></li>
+		  </ul>
+	
+		</nav>
+	
+	  </header>
 
 	<div class="breadcrumb">
     <ol class="breadcrumb_list">
@@ -64,12 +128,16 @@
   </div>
 
 	<div class="banner1">
+		<div class="banner1_img">
+			<img src="./images/special/banner2.png" alt="">
+		</div>
 		<div class="sq">
 			<span>享用一杯讓人放鬆的好茶，
 				生活中短暫而美好的片刻，讓人格外珍惜。
 			</span>
 		</div>
-		<img src="./images/special/banner2.png" alt="">
+		
+		
 	</div>
 
 	<div class="main">
@@ -82,18 +150,19 @@
 				<div class="sp1_text">
 					<h4>簡約風格</h4>
 					<span>近幾年興起極簡主義，想挑戰過度消費的文化，讓家變得更簡潔整齊，或者是想要節省開銷。
-						返璞歸真如何成真？</span>
-					<input type="button" value="more" onclick="location.href='./space.html'" id="more">
+					</span>
 				</div>
+				<input type="button" value="more" onclick="location.href='./space.html'" id="more">
 			</div>
 
 			<div class="sp2">
 				<div class="sp2_text">
-					<h4>簡約風格</h4>
-					<span>近幾年興起極簡主義，想挑戰過度消費的文化，讓家變得更簡潔整齊，或者是想要節省開銷。
-						返璞歸真如何成真？</span>
-					<input type="button" value="more" onclick="location.href='./space.html'" id="more">
+					<h4>鄉村風格</h4>
+					<span>搭配粉嫩色系的牆面以及碎花印染布和壁紙設計，
+						讓英式鄉村風散發如田園小品般的自然柔和氛圍。
+					</span>
 				</div>
+				<input type="button" value="more" onclick="location.href='./space.html'" id="more">
 				<a href="./space.html"><img src="./images/special/sp2.png" alt=""></a>
 			</div>
 
@@ -102,13 +171,109 @@
 				<div class="sp1_text">
 					<h4>簡約風格</h4>
 					<span>近幾年興起極簡主義，想挑戰過度消費的文化，讓家變得更簡潔整齊，或者是想要節省開銷。
-						返璞歸真如何成真？</span>
-					<input type="button" value="more" onclick="location.href='./space.html'" id="more">
+					</span>
 				</div>
+				<input type="button" value="more" onclick="location.href='./space.html'" id="more">
 			</div>
+
+			<div class="sp2">
+				<div class="sp2_text">
+					<h4>鄉村風格</h4>
+					<span>搭配粉嫩色系的牆面以及碎花印染布和壁紙設計，
+						讓英式鄉村風散發如田園小品般的自然柔和氛圍。
+					</span>
+				</div>
+				<input type="button" value="more" onclick="location.href='./space.html'" id="more">
+				<a href="./space.html"><img src="./images/special/sp8.png" alt=""></a>
+			</div>
+
+			<div class="sp1">
+				<a href="./space.html"><img src="./images/special/sp9.png" alt=""></a>
+				<div class="sp1_text">
+					<h4>簡約風格</h4>
+					<span>近幾年興起極簡主義，想挑戰過度消費的文化，讓家變得更簡潔整齊，或者是想要節省開銷。
+					</span>
+				</div>
+				<input type="button" value="more" onclick="location.href='./space.html'" id="more">
+			</div>
+
+			<div class="sp2">
+				<div class="sp2_text">
+					<h4>鄉村風格</h4>
+					<span>搭配粉嫩色系的牆面以及碎花印染布和壁紙設計，
+						讓英式鄉村風散發如田園小品般的自然柔和氛圍。
+					</span>
+				</div>
+				<input type="button" value="more" onclick="location.href='./space.html'" id="more">
+				<a href="./space.html"><img src="./images/special/sp10.png" alt=""></a>
+			</div>
+
+			<div class="sp1">
+				<a href="./space.html"><img src="./images/special/sp11.png" alt=""></a>
+				<div class="sp1_text">
+					<h4>鄉村風格</h4>
+					<span>搭配粉嫩色系的牆面以及碎花印染布和壁紙設計，
+						讓英式鄉村風散發如田園小品般的自然柔和氛圍。
+					</span>
+				</div>
+				<input type="button" value="more" onclick="location.href='./space.html'" id="more">
+			</div>
+
+			<div class="sp2">
+				<div class="sp2_text">
+					<h4>簡約風格</h4>
+					<span>近幾年興起極簡主義，想挑戰過度消費的文化，讓家變得更簡潔整齊，或者是想要節省開銷。
+					</span>
+				</div>
+				<input type="button" value="more" onclick="location.href='./space.html'" id="more">
+				<a href="./space.html"><img src="./images/special/sp12.png" alt=""></a>
+			</div>
+
+			<div class="sp1">
+				<a href="./space.html"><img src="./images/special/sp4.png" alt=""></a>
+				<div class="sp1_text">
+					<h4>鄉村風格</h4>
+					<span>搭配粉嫩色系的牆面以及碎花印染布和壁紙設計，
+						讓英式鄉村風散發如田園小品般的自然柔和氛圍。
+					</span>
+				</div>
+				<input type="button" value="more" onclick="location.href='./space.html'" id="more">
+			</div>
+
+			<div class="sp2">
+				<div class="sp2_text">
+					<h4>簡約風格</h4>
+					<span>近幾年興起極簡主義，想挑戰過度消費的文化，讓家變得更簡潔整齊，或者是想要節省開銷。
+					</span>
+				</div>
+				<input type="button" value="more" onclick="location.href='./space.html'" id="more">
+				<a href="./space.html"><img src="./images/special/sp5.png" alt=""></a>
+			</div>
+
+			<div class="sp1">
+				<a href="./space.html"><img src="./images/special/sp6.png" alt=""></a>
+				<div class="sp1_text">
+					<h4>鄉村風格</h4>
+					<span>搭配粉嫩色系的牆面以及碎花印染布和壁紙設計，
+						讓英式鄉村風散發如田園小品般的自然柔和氛圍。
+					</span>
+				</div>
+				<input type="button" value="more" onclick="location.href='./space.html'" id="more">
+			</div>
+
+			<div class="sp2">
+				<div class="sp2_text">
+					<h4>簡約風格</h4>
+					<span>近幾年興起極簡主義，想挑戰過度消費的文化，讓家變得更簡潔整齊，或者是想要節省開銷。
+					</span>
+				</div>
+				<input type="button" value="more" onclick="location.href='./space.html'" id="more">
+				<a href="./space.html"><img src="./images/special/sp7.png" alt=""></a>
+			</div>
+
 		</div>
 
-		<div class="sp">
+		<!-- <div class="sp">
 			<div class="sp1">
 				<a href="./space.html"><img src="./images/special/sp4.jpg" alt=""></a>
 				<div class="sp1_text">
@@ -121,9 +286,9 @@
 
 			<div class="sp2">
 				<div class="sp2_text">
-					<h4>鄉村風格</h4>
-					<span>搭配粉嫩色系的牆面以及碎花印染布和壁紙設計，
-						讓英式鄉村風散發如田園小品般的自然柔和氛圍。</span>
+					<h4>簡約風格</h4>
+					<span>近幾年興起極簡主義，想挑戰過度消費的文化，讓家變得更簡潔整齊，或者是想要節省開銷。
+						返璞歸真如何成真？</span>
 					<input type="button" value="more" onclick="location.href='./space.html'" id="more">
 				</div>
 				<a href="./space.html"><img src="./images/special/sp5.jpg" alt=""></a>
@@ -138,35 +303,53 @@
 					<input type="button" value="more" onclick="location.href='./space.html'" id="more">
 				</div>
 			</div>
-		</div>
+			<div class="sp2">
+				<div class="sp2_text">
+					<h4>簡約風格</h4>
+					<span>近幾年興起極簡主義，想挑戰過度消費的文化，讓家變得更簡潔整齊，或者是想要節省開銷。
+						返璞歸真如何成真？</span>
+					<input type="button" value="more" onclick="location.href='./space.html'" id="more">
+				</div>
+				<a href="./space.html"><img src="./images/special/sp5.jpg" alt=""></a>
+			</div>
+		</div> -->
 	</div>
 
 
 
 	<footer>
 		<div class="end">
-			<div class="top">
-        <a href="#">
-          <i class="fas fa-home" style="font-size:36px; color:#6e6c6c;"></i>
-        </a>
-      </div>
-
-			<a href="./index.html">
-				<img src="./images/index/logo1.png" alt="LOGO">
+		  <div class="top">
+			<a href="#">
+			  <i class="fas fa-home" style="font-size:36px; color:#6e6c6c;"></i>
 			</a>
-			<a href="#">更多資訊</a>
-			<a href="#">關於我們</a>
-			<a href="#">加入我們</a>
-			<hr>
-			<p>
-				本網站為緯育TibaMe前端設計工程師班專業技術養成班第72期學員專題作品，本平台僅供學習、展示之用
-				參考資源：ikea ｜ Pinterest 。若有侵權疑慮，您可私訊<a href="https://www.facebook.com/TibaMe/" target="_blank">TibaMe-前端設計工程師養成班</a>，後續會由專人協助處理。
-			</p>
-			<p>
-				Copyright © 2021 SIMPLE. All rights reserved
-			</p>
+		  </div>
+	
+		  <div class="end_logo">
+			<a href="./index.html">
+			  <img src="./images/index/logo1.png" alt="LOGO">
+			</a>
+		  </div>
+	
+		  <div class="end_icon">
+			<i class="fab fa-facebook-square"></i>
+			<i class="fab fa-instagram"></i>
+			<i class="fab fa-twitter-square"></i>
+		  </div>
+		  <!-- <a href="#">更多資訊</a>
+		  <a href="#">關於我們</a>
+		  <a href="#">加入我們</a> -->
+		  <hr>
+		  <p>
+			本網站為緯育TibaMe前端設計工程師班專業技術養成班第72期學員專題作品，本平台僅供學習、展示之用
+			參考資源：ikea ｜ Pinterest 。若有侵權疑慮，您可私訊<a href="https://www.facebook.com/TibaMe/"
+			  target="_blank">TibaMe-前端設計工程師養成班</a>，後續會由專人協助處理。
+		  </p>
+		  <p>
+			Copyright © 2021 SIMPLE. All rights reserved
+		  </p>
 		</div>
-	</footer>
+	  </footer>
 </body>
 
 </html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./vendors/slick/slick.css" />
+  <!-- / Add the new slick-theme.css if you want the default styling -->
+  <link rel="stylesheet" type="text/css" href="./vendors/slick/slick-theme.css" />
+  <script src="https://kit.fontawesome.com/c9d50d5c1a.js" crossorigin="anonymous"></script>
+  <style>
+    /* reset */
+    body,
+    h1,
+    ul {
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* NavBar */
+    nav {
+      /* border: 1px solid red; */
+      background: #eee;
+      box-shadow: 0px 1px 3px #00000088;
+    }
+
+    nav::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    h1 {
+      /* Logo */
+      float: left;
+      padding-left: 50px;
+      line-height: 50px;
+    }
+
+    /* 隱藏 checkbox */
+    input {
+      display: none;
+    }
+
+    /* 漢堡按鈕 */
+    label {
+      float: right;
+      padding-right: 50px;
+      line-height: 50px;
+    }
+
+    label>img {
+      width: 30px;
+      vertical-align: middle;
+    }
+
+    /* 選單列 */
+    .menu {
+      clear: both;
+      background: rgb(230, 197, 197);
+    }
+
+    .menu>li {
+      text-align: center;
+      border-bottom: 1px solid #efefef;
+    }
+
+    .menu>li>a {
+      display: block;
+      padding: 10px 0;
+      font-size: 18px;
+      color: #5d5d5d;
+    }
+
+    .menu>li>a:hover {
+      background: #5d5d5d;
+      color: #fff;
+    }
+
+
+    .menu {
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    .menu.-on {
+      max-height: 300px;
+    }
+
+    /* input:checked~.menu {
+      max-height: 300px;
+    } */
+
+    .menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: .5s;
+      /* 動畫秒數 */
+    }
+
+
+    @media screen and (min-width: 768px) {
+      label {
+        display: none;
+      }
+
+      .menu {
+        float: right;
+        clear: none;
+        max-height: 50px;
+        background: #eee;
+      }
+
+      .menu>li {
+        display: inline-block;
+      }
+
+      .menu>li>a {
+        padding: 0 15px;
+      }
+    }
+
+    .autoplay {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      /* background-size: contain; */
+    }
+
+    div.banner>img {
+      /* max-width:1200px;*/
+      /* margin: 0 auto;  */
+      width: 100%;
+      /* background-size: contain; */
+    }
+
+
+
+
+    /* 基本按鈕樣式 */
+    button.hamburger_icon {
+      /* border: 1px solid gray; */
+      width: 44px;
+      height: 44px;
+      border: none;
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      background: none;
+    }
+
+    /* 每一條橫線的樣式 */
+    button.hamburger_icon span.-hr {
+      height: 1px;
+      width: 80%;
+      background-color: gray;
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* 最上面那條線的樣式 */
+    button.hamburger_icon span.-hr.-top {
+      top: 25%;
+    }
+
+    /* 最下面那條線的樣式 */
+    button.hamburger_icon span.-hr.-bottom {
+      top: 75%;
+    }
+
+
+
+    /* -on 的狀態 */
+    /* 上方的線 */
+    button.hamburger_icon.-on span.-hr.-top {
+      transform-origin: top left;
+      top: 5px;
+      left: 6px;
+      width: 102%;
+      transform: rotate(45deg);
+    }
+
+    /* 中間的線 */
+    button.hamburger_icon.-on span.-hr.-middle {
+      opacity: 0;
+    }
+
+    /* 下方的線 */
+    button.hamburger_icon.-on span.-hr.-bottom {
+      transform-origin: top left;
+      bottom: 5px;
+      left: 6px;
+      width: 102%;
+      transform: rotate(-45deg);
+
+      top: auto;
+    }
+
+
+
+    @keyframes next{
+      0%{
+        left: 0;
+        opacity: 0.5;
+      }
+      100%{
+        left: 2%;
+        opacity: 1;
+      }
+      /* 100%{
+        left: 10%;
+        opacity: 1;
+      } */
+    }
+
+    i.fa-arrow-right{
+      position: absolute;
+      opacity: 0;
+      animation: next 1.3s ease-out infinite;
+    }
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <!-- <div class="banner_container" id="bannerContainer">
+    <div class="img_box">
+      <圖片元素
+      <div><img src="./images/index/banner1.png" alt=""></div>
+      <div><img src="./images/index/banner1.png" alt=""></div>
+      <div><img src="./images/index/banner1.png" alt=""></div>
+      <div><img src="./images/index/banner1.png" alt=""></div>
+    </div> -->
+  <!-- <ul class="sel_box">
+      選擇按鈕
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul> -->
+
+  <!-- <div class="left_btn btn"></div> -->
+  <!--左切換按鈕-->
+  <!-- <div class="right_btn btn"></div> -->
+  <!--右切換按鈕-->
+  <!-- </div> -->
+  <!-- <script src="./js/test.js"></script> -->
+
+  <nav>
+    <h1>NavBar</h1>
+    <!-- <label for="switch"><img src="https://static.thenounproject.com/png/547171-200.png"></label>
+    <input type="checkbox" id="switch"> -->
+    <button type="button" class="hamburger_icon">
+      <span class="-hr -top"></span>
+      <span class="-hr -middle"></span>
+      <span class="-hr -bottom"></span>
+    </button>
+
+    <ul class="menu">
+      <li><a href="##">Home</a></li>
+      <li><a href="##">About</a></li>
+      <li><a href="##">Graphy</a></li>
+      <li><a href="##">Intro</a></li>
+      <li><a href="##">Contact</a></li>
+    </ul>
+  </nav>
+
+
+
+
+  <div class="autoplay">
+    <div>
+      <div class="banner"><img src="./images/index/banner1.png" alt=""></div>
+    </div>
+    <div>
+      <div class="banner"><img src="./images/index/banner1.png" alt=""></div>
+    </div>
+    <div>
+      <div class="banner"><img src="./images/index/banner1.png" alt=""></div>
+    </div>
+    <div>
+      <div class="banner"><img src="./images/index/banner1.png" alt=""></div>
+    </div>
+  </div>
+
+
+  <div class="commodity_more">
+    <div class="pr1">
+      <div class="pr1_img">
+        <a href="#" class="product">
+          <img src="./images/index/5/5-1.png" alt="商品" class="product">
+        </a>
+      </div>
+      <div class="pr1_text">
+        <a href="#" class="pr1_text">
+          <h4>椅子</h4>
+        </a>
+        <span>材質:木頭</span><br>
+        <span>$399元</span>
+      </div>
+    </div>
+    <div class="pr1">
+      <div class="pr1_img">
+        <a href="#" class="product">
+          <img src="./images/index/5/5-1.png" alt="商品" class="product">
+        </a>
+      </div>
+      <div class="pr1_text">
+        <a href="#" class="pr1_text">
+          <h4>椅子</h4>
+        </a>
+        <span>材質:木頭</span><br>
+        <span>$399元</span>
+      </div>
+    </div>
+    <div class="pr1">
+      <div class="pr1_img">
+        <a href="#" class="product">
+          <img src="./images/index/5/5-1.png" alt="商品" class="product">
+        </a>
+      </div>
+      <div class="pr1_text">
+        <a href="#" class="pr1_text">
+          <h4>椅子</h4>
+        </a>
+        <span>材質:木頭</span><br>
+        <span>$399元</span>
+      </div>
+    </div>
+    <div class="pr1">
+      <div class="pr1_img">
+        <a href="#" class="product">
+          <img src="./images/index/5/5-1.png" alt="商品" class="product">
+        </a>
+      </div>
+      <div class="pr1_text">
+        <a href="#" class="pr1_text">
+          <h4>椅子</h4>
+        </a>
+        <span>材質:木頭</span><br>
+        <span>$399元</span>
+      </div>
+    </div>
+    <div class="pr1">
+      <div class="pr1_img">
+        <a href="#" class="product">
+          <img src="./images/index/5/5-1.png" alt="商品" class="product">
+        </a>
+      </div>
+      <div class="pr1_text">
+        <a href="#" class="pr1_text">
+          <h4>椅子</h4>
+        </a>
+        <span>材質:木頭</span><br>
+        <span>$399元</span>
+      </div>
+    </div>
+    <div class="pr1">
+      <div class="pr1_img">
+        <a href="#" class="product">
+          <img src="./images/index/5/5-3.jpg" alt="商品" class="product">
+        </a>
+      </div>
+      <div class="pr1_text">
+        <a href="#" class="pr1_text">
+          <h4>椅子</h4>
+        </a>
+        <span>材質:木頭</span><br>
+        <span>$399元</span>
+      </div>
+    </div>
+    <div class="pr1">
+      <div class="pr1_img">
+        <a href="#" class="product">
+          <img src="./images/index/5/5-2.png" alt="商品" class="product">
+        </a>
+      </div>
+      <div class="pr1_text">
+        <a href="#" class="pr1_text">
+          <h4>椅子</h4>
+        </a>
+        <span>材質:木頭</span><br>
+        <span>$399元</span>
+      </div>
+    </div>
+  </div>
+
+  <i class="fas fa-arrow-right" style="font-size: 32px;"></i>
+  
+
+
+  <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./vendors/slick/slick.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.autoplay').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 3000,
+        prevArrow: "<button type='button' class='slick-prev slick-arrow'><img src='./imgages/index/next1.png' alt=''></button>"
+      });
+
+
+      // jQuery 版本：DOM 載入完成之後執行
+      $(function () {
+        // 按鈕狀態的切換
+        $("button.hamburger_icon").on("click", function () {
+
+          $(this).toggleClass("-on");
+          $("ul.menu").toggleClass("-on");
+        });
+      });
+
+
+      $('.commodity_more').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 5
+      });
+    });
+
+
+
+
+    // let slideCount = $("div.commodity_more>ul>li").length;
+// alert(slideCount);
+
+$("#next").click(function () {
+    let divWidth = parseInt($("div.commodity_more").width());
+    let ulWidth = parseInt($("div.commodity_moreul").width());
+    let liWidth = parseInt($("div.commodity_more>ul>li").width() + 40);
+    
+    // alert(ulWidth);
+
+    let currentLeft = $("div.commodity_more > ul").css("left"); //String
+    // alert(parseInt(currentLeft));
+
+    if (-parseInt(currentLeft) >= (ulWidth - divWidth - liWidth * 3)) {
+        $("div.commodity_more > ul").animate({
+            left: -(ulWidth - divWidth)
+        });
+    } else {
+        $("div.commodity_more > ul").animate({
+            left: parseInt(currentLeft) - (liWidth * 3)
+        });
+    }
+});
+
+$("#pre").click(function () {
+  let divWidth = parseInt($("div.commodity_more").width());
+  let liWidth = parseInt($("div.commodity_more>ul>li").width() + 40);
+  let ulWidth = parseInt($("div.commodity_more>ul").width());
+
+  let currentLeft = $("div.commodity_more > ul").css("left");
+  // alert(currentLeft);
+  // $("div.product > ul").animate({
+  //     left: parseInt(currentLeft) + (liWidth * 3)
+  // });
+
+  if (-parseInt(currentLeft) <= (liWidth * 3)) {
+      $("div.commodity_more > ul").animate({
+          left: 0
+      });
+  } else {
+      $("div.commodity_more > ul").animate({
+          left: parseInt(currentLeft) + (liWidth * 3)
+      });
+  };
+});
+  </script>
+
+</body>
+
+</html>

@@ -3,38 +3,50 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
   <title>Simple｜首頁</title>
   <link href="./css/header.css" rel="stylesheet">
-  <link href="./css/breadcrumb.css" rel="stylesheet">
+  <link href="./css/hamburger.css" rel="stylesheet">
+  <!-- <link href="./css/breadcrumb.css" rel="stylesheet"> -->
   <link href="./css/footer.css" rel="stylesheet">
   <link href="./css/index.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./vendors/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./vendors/slick/slick-theme.css" />
+
   <script src="https://kit.fontawesome.com/c9d50d5c1a.js" crossorigin="anonymous"></script>
+  <!-- <script src="js/jquery-3.6.0.js"></script> -->
+  <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
 
   <header>
-
     <nav class="title">
-      <ul>
-        <li class="logo">
-          <a href="./index.html" class="logo"><img src="./images/index/logo1.png" alt="LOGO"></a>
-        </li>
+      <div class="logo">
+        <a href="./index.html" class="logo"><img src="./images/index/logo1.png" alt="LOGO"></a>
+      </div>
+      <ul class="nav">
         <li><a href="./about.html">關於我們</a></li>
         <li>
           <div class="menu">
-            <a href="./room.html">空間</a>
+            <a>
+              空間
+              <i class="fas fa-chevron-down" style="margin-left: 5px; font-size: 18px;"></i>
+              <i class="fas fa-chevron-up" style="margin-left: 5px; font-size: 18px;"></i>
+            </a>
             <ul class="menu_list">
               <li>
-                <a href="./room.html" class="menu_list">客廳</a>
+                <a href="./room.html" class="menu_list1">客廳</a>
               </li>
               <hr class="hr1">
               <li>
-                <a href="./room.html" class="menu_list">臥室</a>
+                <a href="./room.html" class="menu_list1">臥室</a>
               </li>
               <hr class="hr1">
               <li>
-                <a href="./room.html" class="menu_list">廚房</a>
+                <a href="./room.html" class="menu_list1">廚房</a>
               </li>
             </ul>
           </div>
@@ -57,22 +69,87 @@
       </ul>
     </nav>
 
+    <nav class="title1">
+
+      <div class="logo1">
+        <a href="./index.html" class="logo1"><img src="./images/index/logo1.png" alt="LOGO"></a>
+      </div>
+
+      <div class="srch1">
+        <div class="srch1_img">
+          <span class="icon"><img src="./images/index/search.png" alt=""></span>
+          <input type="search" id="search" placeholder="Search">
+        </div>
+      </div>
+
+      <div class="icon_m">
+        <a href="#" class="vector1"><img src="./images/index/vector.png" alt="vector"></a>
+        <a href="#" class="shop1"><img src="./images/index/shop.png" alt="shop"></a>
+      </div>
+
+      <button class="hamburger hamburger--spring" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <ul class="menu1">
+        <li><a href="./about.html">關於我們</a></li>
+        <li>
+          <div class="menu_1">
+            <a class="test">
+              空間
+              <i class="fas fa-chevron-down" style="margin-left: 5px;"></i>
+              <i class="fas fa-chevron-up" style="margin-left: 5px; font-size: 18px;"></i>
+            </a>
+            <ul class="menu_list_1">
+              <li>
+                <a href="./room.html" class="menu_list">客廳</a>
+              </li>
+              <li>
+                <a href="./room.html" class="menu_list">臥室</a>
+              </li>
+              <li>
+                <a href="./room.html" class="menu_list">廚房</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="./special.html">風格靈感</a></li>
+        <li><a href="./qs.html">常見問題</a></li>
+      </ul>
+
+    </nav>
+
   </header>
 
-  <div class="breadcrumb">
+  <!-- <div class="breadcrumb">
     <ol class="breadcrumb_list">
-      <li><a href="#">首頁</a></li>     
+      <li><a href="#">首頁</a></li>
     </ol>
+  </div> -->
+
+  <div class="banner1">
+    <div>
+      <div class="banner"><img src="./images/index/banner1-1.png" alt=""></div>
+    </div>
+    <div>
+      <div class="banner"><img src="./images/index/banner1-3.png" alt=""></div>
+    </div>
+    <div>
+      <div class="banner"><img src="./images/index/banner1-5.png" alt=""></div>
+    </div>
+    <div>
+      <div class="banner"><img src="./images/index/banner1-4.png" alt=""></div>
+    </div>
   </div>
 
-  <div class="banner1"></div>
-
   <div class="main">
+
     <div class="text">
-      <p>
-        當在家工作成為許多人的「新常態」時，
-        我們更要仔細思考如何善用空間，在工作和生活間找到平衡。
-      </p>
+      <p>生活中短暫而美好的片刻，讓人格外珍惜</p>
+       <p>簡單、慢腳步、對環境友善的生活態度，抒解城市生活所帶來的壓力。</p>
+      
     </div>
 
     <div class="col">
@@ -84,20 +161,22 @@
     <div class="commodity_nav">
       <ul>
         <li>
-          <a href="#" class="new">最新<span>new</span></a>
+          <a class="new">最新<span>new</span></a>
         </li>
         <li>
-          <a href="#" class="hot">熱門<span>hot</span></a>
+          <a class="hot">熱門<span>hot</span></a>
         </li>
       </ul>
     </div>
-
+    <!-- <img src="./images/index/new.png" alt=""> -->
     <div class="commodity">
       <ul>
-        <li>
+        <li id="new">
           <div class="list_product">
             <div class="pr1">
+              <img class="img_new" src="./images/index/new.png" alt="">
               <div class="pr1_img">
+                <i class="far fa-star"></i>
                 <a href="#" class="product">
                   <img src="./images/index/2/2-8.jpg" alt="商品" class="product">
                 </a>
@@ -112,8 +191,10 @@
             </div>
 
             <div class="pr1">
+              <img class="img_new" src="./images/index/new.png" alt="">
               <div class="pr1_img">
-                <a href="#">
+                <i class="far fa-star"></i>
+                <a href="#" class="product">
                   <img src="./images/index/2/2-5.jpg" alt="商品" class="product">
                 </a>
               </div>
@@ -127,8 +208,10 @@
             </div>
 
             <div class="pr1">
+              <img class="img_new" src="./images/index/new.png" alt="">
               <div class="pr1_img">
-                <a href="#">
+                <i class="far fa-star"></i>
+                <a href="#" class="product">
                   <img src="./images/index/2/2-6.jpg" alt="商品" class="product">
                 </a>
               </div>
@@ -142,9 +225,11 @@
             </div>
 
             <div class="pr1">
+              <img class="img_new" src="./images/index/new.png" alt="">
               <div class="pr1_img">
-                <a href="#">
-                  <img src="./images/index/2/2-7.png" alt="商品" class="product">
+                <i class="far fa-star"></i>
+                <a href="#" class="product">
+                  <img src="./images/index/2/2-11.jpg" alt="商品" class="product">
                 </a>
               </div>
               <div class="pr1_text">
@@ -155,6 +240,148 @@
                 <span>$599元</span>
               </div>
             </div>
+
+            <div class="pr1">
+              <img class="img_new" src="./images/index/new.png" alt="">
+              <div class="pr1_img">
+                <i class="far fa-star"></i>
+                <a href="#" class="product">
+                  <img src="./images/index/2/2-10.jpg" alt="商品" class="product">
+                </a>
+              </div>
+              <div class="pr1_text">
+                <a href="#" class="pr1_text">
+                  <h4>辦公椅</h4>
+                </a>
+                <span>材質:木頭</span><br>
+                <span>$599元</span>
+              </div>
+            </div>
+
+            <div class="pr1">
+              <img class="img_new" src="./images/index/new.png" alt="">
+              <div class="pr1_img">
+                <i class="far fa-star"></i>
+                <a href="#" class="product">
+                  <img src="./images/index/2/2-12.jpg" alt="商品" class="product">
+                </a>
+              </div>
+              <div class="pr1_text">
+                <a href="#" class="pr1_text">
+                  <h4>辦公椅</h4>
+                </a>
+                <span>材質:木頭</span><br>
+                <span>$599元</span>
+              </div>
+            </div>
+
+          </div>
+        </li>
+
+        <li id="hot">
+          <div class="list_product">
+            <div class="pr1">
+              <img class="img_hot" src="./images/index/hot.png" alt="">
+              <div class="pr1_img">
+                <i class="far fa-star"></i>
+                <a href="#" class="product">
+                  <img src="./images/index/2/2-13.jpg" alt="商品" class="product">
+                </a>
+              </div>
+              <div class="pr1_text">
+                <a href="#" class="pr1_text">
+                  <h4>辦公椅</h4>
+                </a>
+                <span>材質:木頭</span><br>
+                <span>$599元</span>
+              </div>
+            </div>
+
+            <div class="pr1">
+              <img class="img_hot" src="./images/index/hot.png" alt="">
+              <div class="pr1_img">
+                <i class="far fa-star"></i>
+                <a href="#" class="product">
+                  <img src="./images/index/2/2-14.jpg" alt="商品" class="product">
+                </a>
+              </div>
+              <div class="pr1_text">
+                <a href="#" class="pr1_text">
+                  <h4>桌子</h4>
+                </a>
+                <span>材質:木頭</span><br>
+                <span>$599元</span>
+              </div>
+            </div>
+
+            <div class="pr1">
+              <img class="img_hot" src="./images/index/hot.png" alt="">
+              <div class="pr1_img">
+                <i class="far fa-star"></i>
+                <a href="#" class="product">
+                  <img src="./images/index/2/2-15.jpg" alt="商品" class="product">
+                </a>
+              </div>
+              <div class="pr1_text">
+                <a href="#" class="pr1_text">
+                  <h4>枕頭</h4>
+                </a>
+                <span>材質:棉</span><br>
+                <span>$599元</span>
+              </div>
+            </div>
+
+            <div class="pr1">
+              <img class="img_hot" src="./images/index/hot.png" alt="">
+              <div class="pr1_img">
+                <i class="far fa-star"></i>
+                <a href="#" class="product">
+                  <img src="./images/index/2/2-12.jpg" alt="商品" class="product">
+                </a>
+              </div>
+              <div class="pr1_text">
+                <a href="#" class="pr1_text">
+                  <h4>吊燈</h4>
+                </a>
+                <span>材質:木頭</span><br>
+                <span>$599元</span>
+              </div>
+            </div>
+
+            <div class="pr1">
+              <img class="img_hot" src="./images/index/hot.png" alt="">
+              <div class="pr1_img">
+                <i class="far fa-star"></i>
+                <a href="#" class="product">
+                  <img src="./images/index/2/2-16.jpg" alt="商品" class="product">
+                </a>
+              </div>
+              <div class="pr1_text">
+                <a href="#" class="pr1_text">
+                  <h4>辦公椅</h4>
+                </a>
+                <span>材質:木頭</span><br>
+                <span>$599元</span>
+              </div>
+            </div>
+
+            <div class="pr1">
+              <img class="img_hot" src="./images/index/hot.png" alt="">
+              <div class="pr1_img">
+                <i class="far fa-star"></i>
+                <a href="#" class="product">
+                  <img src="./images/index/2/2-10.jpg" alt="商品" class="product">
+                </a>
+              </div>
+              <div class="pr1_text">
+                <a href="#" class="pr1_text">
+                  <h4>辦公椅</h4>
+                </a>
+                <span>材質:木頭</span><br>
+                <span>$599元</span>
+              </div>
+            </div>
+
           </div>
         </li>
       </ul>
@@ -163,6 +390,7 @@
         <input type="button" value="more" onclick="location.href='./index.html'" id="more">
         <!-- <button type="button" name="button">more</button> -->
       </a>
+
     </div>
 
     <div class="banner2">
@@ -179,35 +407,73 @@
     </div>
 
     <div class="style1">
-      <div class="style_img">
-        <a href="#" class="style_img">
-          <img src="./images/index/3/3-1.png" alt="圖片">
-        </a>
-      </div>
-      <div class="style_text">
-        <h4> 愜意舒適的生活 </h4>
-        <span> 晚上睡覺、白天創作和讀書，都能在同一個空間裡發生？</span>
-        <a href="#" class="button">
+      <div class="style">
+        <div class="style_img">
+          <a href="#" class="style_img">
+            <img src="./images/index/3/3-1.png" alt="圖片">
+          </a>
+        </div>
+        <div class="style_text">
+          <h4> 愜意舒適的生活 </h4>
+          <span>
+            白天辦公和讀書，都能在同一個空間裡發生？
+            晚上也能完全放下一切，盡情享受悠閒時光。
+          </span>
           <input type="button" value="more" onclick="location.href='./index.html'" id="more">
-          <!-- <button type="button" name="button">more</button> -->
-        </a>
+        </div>
+        <i class="fas fa-chevron-left" style="font-size: 24px"></i>
       </div>
 
-      <div class="style_text">
-        <h4> 愜意舒適的生活 </h4>
-        <span> 晚上睡覺、白天創作和讀書，都能在同一個空間裡發生？</span>
-        <a href="#" class="button">
+      <div class="style">
+        <div class="style_img">
+          <a href="#" class="style_img">
+            <img src="./images/index/3/3-2.png" alt="圖片">
+          </a>
+        </div>
+        <div class="style_text">
+          <h4> 溫暖美好的空間 </h4>
+          <span> 有什麼能比煥然一新的感覺更讓人愉悅？如何從空蕩蕩的純白空間，變成舒適的靜謐小窩。</span>
           <input type="button" value="more" onclick="location.href='./index.html'" id="more">
-          <!-- onclick 語法是JavaScript 的功能，滑鼠按下按鈕的時候連接到網址 -->
-          <!-- <button type="button" name="button">more</button> -->
-        </a>
-      </div>
-      <div class="style_img">
-        <a href="#" class="style_img">
-          <img src="./images/index/3/3-2.png" alt="圖片">
-        </a>
+          <!-- onclick 語法是JavaScript 的功能，滑鼠按下按鈕的時候連接到網址-->
+        </div>
+        <i class="fas fa-chevron-right" style="font-size: 24px"></i>
       </div>
     </div>
+
+    <div class="style2">
+      <div class="style">
+        <div class="style_img">
+          <a href="#" class="style_img">
+            <img src="./images/index/3/3-3.png" alt="圖片">
+          </a>
+        </div>
+        <div class="style_text">
+          <h4> 愜意舒適的生活 </h4>
+          <span>
+            白天辦公和讀書，都能在同一個空間裡發生？
+            晚上也能完全放下一切，盡情享受悠閒時光。
+          </span>
+          <input type="button" value="more" onclick="location.href='./index.html'" id="more">
+        </div>
+        <i class="fas fa-chevron-left" style="font-size: 24px"></i>
+      </div>
+
+      <div class="style">
+        <div class="style_img">
+          <a href="#" class="style_img">
+            <img src="./images/index/3/3-4.png" alt="圖片">
+          </a>
+        </div>
+        <div class="style_text">
+          <h4> 溫暖美好的空間 </h4>
+          <span> 有什麼能比煥然一新的感覺更讓人愉悅？如何從空蕩蕩的純白空間，變成舒適的靜謐小窩。</span>
+          <input type="button" value="more" onclick="location.href='./index.html'" id="more">
+          <!-- onclick 語法是JavaScript 的功能，滑鼠按下按鈕的時候連接到網址-->
+        </div>
+        <i class="fas fa-chevron-right" style="font-size: 24px"></i>
+      </div>
+    </div>
+
 
     <div class="col">
       <h2>
@@ -216,36 +482,73 @@
     </div>
 
     <div class="design">
-      <img src="./images/index/4/4-6.png" alt="圖片" class="back">
-      <div class="design_1">
-        <span class="d1">空間巧思</span>
-        <img src="./images/index/4/4-1.png" alt="圖片">
-        <span class="d2">
-          結合收納，不但可收好雜物，
-          同時也可以將心愛物品好好展示。
-        </span>
+      <div class="design_icon">
+        <div class="fa_icon">
+          <i class="fas fa-couch"></i>
+          <p>客廳</p>
+        </div>
+        <div class="fa_icon">
+          </i><i class="fas fa-bed"></i>
+          <p>臥室</p>
+        </div>
+        <div class="fa_icon">
+          <i class="fas fa-bath"></i>
+          <p>浴室</p>
+        </div>
+        <div class="fa_icon">
+          <i class="fas fa-utensils"></i>
+          <p>廚房</p>
+        </div>
       </div>
 
-      <div class="design_2">
-        <span class="d1">空間巧思</span>
-        <img src="./images/index/4/4-2.png" alt="圖片">
-        <span class="d2">
-          結合收納，不但可收好雜物，
-          同時也可以將心愛物品好好展示。
-        </span>
-      </div>
-
-      <div class="design_3">
-        <span class="d1">空間巧思</span>
-        <img src="./images/index/4/4-3.png" alt="圖片">
-        <span class="d2">
-          結合收納，不但可收好雜物，
-          同時也可以將心愛物品好好展示。
-        </span>
+      <div class="design_content">
+        <div class="content_img">
+          <img src="./images/index/4/4-7.png" alt="">
+        </div>
+        <div class="content_text">
+          <h2>放鬆的愜意客廳</h2>
+          <span>
+            夏天到了，天氣越來越熱，用些感覺涼適的家具，讓客廳煥然一新。
+            舒適的休閒椅加上邊桌，隔絕熱度的窗簾，和喜歡的燈具；很難決定是否要出門的日子，就在家裡享受生活吧。
+          </span>
+          <div class="design_btn">
+            <i class="fas fa-arrow-right" style="font-size: 28px;"></i>
+            <button type="button" id="design">更多設計</button>
+          </div>
+          
+        </div>
+        <div class="content_imgbk">
+          <img src="./images/index/4/4-8.png" alt="">
+        </div>
       </div>
     </div>
 
+    <div class="text1">
+      <h3>還在猶豫嗎?設計也可以很多元，快來選購吧。</h3>
+    </div>
 
+    <div class="img6">
+      <div class="img6_content">
+        <a href="#">
+          <img src="./images/index/6/6-1.png" alt="">
+        </a>
+      </div>
+      <div class="img6_content">
+        <a href="#">
+          <img src="./images/index/6/6-4.png" alt="">
+        </a>
+      </div>
+      <div class="img6_content">
+        <a href="#">
+          <img src="./images/index/6/6-2.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="banner3">
+      <img src="./images/index/banner5.png" alt="">
+      <span>發揮想像，讓空間多些溫柔的生活感</span>
+    </div>
 
     <div class="col">
       <h2>
@@ -253,93 +556,182 @@
       </h2>
     </div>
 
-    <div class="commodity_1">
-      <ul>
-        <li>
-          <div class="list_product_1">
-            <div class="pr1">
-              <div class="pr1_img">
-                <a href="#" class="product">
-                  <img src="./images/index/5/5-1.png" alt="商品" class="product">
-                </a>
+    <div class="product_more">
+      <button type="button">
+        <i class="fas fa-angle-left" id="pre"></i>
+      </button>
+      <div class="hidden">
+        <div class="commodity_more">
+          <ul style="left: 0px;">
+            <li>
+              <div class="pr1">
+                <div class="pr1_img">
+                  <a href="#" class="product">
+                    <img src="./images/index/5/5-1.png" alt="商品" class="product">
+                  </a>
+                </div>
+                <div class="pr1_text">
+                  <a href="#" class="pr1_text">
+                    <h4>椅子</h4>
+                  </a>
+                  <span>材質:木頭</span><br>
+                  <span>$399元</span>
+                </div>
               </div>
-              <div class="pr1_text">
-                <a href="#" class="pr1_text">
-                  <h4>椅子</h4>
-                </a>
-                <span>材質:木頭</span><br>
-                <span>$399元</span>
+            </li>
+            <li>
+              <div class="pr1">
+                <div class="pr1_img">
+                  <a href="#">
+                    <img src="./images/index/5/5-2.png" alt="商品" class="product">
+                  </a>
+                </div>
+                <div class="pr1_text">
+                  <a href="#" class="pr1_text">
+                    <h4>抱枕</h4>
+                  </a>
+                  <span>材質:棉</span><br>
+                  <span>$399元</span>
+                </div>
               </div>
-            </div>
+            </li>
+            <li>
+              <div class="pr1">
+                <div class="pr1_img">
+                  <a href="#">
+                    <img src="./images/index/5/5-3.jpg" alt="商品" class="product">
+                  </a>
+                </div>
+                <div class="pr1_text">
+                  <a href="#" class="pr1_text">
+                    <h4>檯燈</h4>
+                  </a>
+                  <span>材質:鐵</span><br>
+                  <span>$399元</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pr1">
+                <div class="pr1_img">
+                  <a href="#">
+                    <img src="./images/index/5/5-4.jpg" alt="商品" class="product">
+                  </a>
+                </div>
+                <div class="pr1_text">
+                  <a href="#" class="pr1_text">
+                    <h4>毯子</h4>
+                  </a>
+                  <span>材質:絲質</span><br>
+                  <span>$399元</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pr1">
+                <div class="pr1_img">
+                  <a href="#">
+                    <img src="./images/index/5/5-5.jpg" alt="商品" class="product">
+                  </a>
+                </div>
+                <div class="pr1_text">
+                  <a href="#" class="pr1_text">
+                    <h4>收納盒</h4>
+                  </a>
+                  <span>材質:木頭</span><br>
+                  <span>$399元</span>
+                </div>
+              </div>
+            </li>
 
-            <div class="pr1">
-              <div class="pr1_img">
-                <a href="#">
-                  <img src="./images/index/5/5-2.png" alt="商品" class="product">
-                </a>
+            <li>
+              <div class="pr1">
+                <div class="pr1_img">
+                  <a href="#" class="product">
+                    <img src="./images/index/5/5-19.jpg" alt="商品" class="product">
+                  </a>
+                </div>
+                <div class="pr1_text">
+                  <a href="#" class="pr1_text">
+                    <h4>桌燈</h4>
+                  </a>
+                  <span>材質:木頭</span><br>
+                  <span>$399元</span>
+                </div>
               </div>
-              <div class="pr1_text">
-                <a href="#" class="pr1_text">
-                  <h4>抱枕</h4>
-                </a>
-                <span>材質:棉</span><br>
-                <span>$399元</span>
+            </li>
+            <li>
+              <div class="pr1">
+                <div class="pr1_img">
+                  <a href="#">
+                    <img src="./images/index/5/5-18.jpg" alt="商品" class="product">
+                  </a>
+                </div>
+                <div class="pr1_text">
+                  <a href="#" class="pr1_text">
+                    <h4>層架</h4>
+                  </a>
+                  <span>材質:木頭</span><br>
+                  <span>$399元</span>
+                </div>
               </div>
-            </div>
-
-            <div class="pr1">
-              <div class="pr1_img">
-                <a href="#">
-                  <img src="./images/index/5/5-3.jpg" alt="商品" class="product">
-                </a>
+            </li>
+            <li>
+              <div class="pr1">
+                <div class="pr1_img">
+                  <a href="#">
+                    <img src="./images/index/5/5-17.jpg" alt="商品" class="product">
+                  </a>
+                </div>
+                <div class="pr1_text">
+                  <a href="#" class="pr1_text">
+                    <h4>雙人床</h4>
+                  </a>
+                  <span>材質:木頭</span><br>
+                  <span>$399元</span>
+                </div>
               </div>
-              <div class="pr1_text">
-                <a href="#" class="pr1_text">
-                  <h4>檯燈</h4>
-                </a>
-                <span>材質:鐵</span><br>
-                <span>$399元</span>
+            </li>
+            <li>
+              <div class="pr1">
+                <div class="pr1_img">
+                  <a href="#">
+                    <img src="./images/index/5/5-16.jpg" alt="商品" class="product">
+                  </a>
+                </div>
+                <div class="pr1_text">
+                  <a href="#" class="pr1_text">
+                    <h4>層架</h4>
+                  </a>
+                  <span>材質:木頭</span><br>
+                  <span>$399元</span>
+                </div>
               </div>
-            </div>
-
-            <div class="pr1">
-              <div class="pr1_img">
-                <a href="#">
-                  <img src="./images/index/5/5-4.jpg" alt="商品" class="product">
-                </a>
+            </li>
+            <li>
+              <div class="pr1">
+                <div class="pr1_img">
+                  <a href="#">
+                    <img src="./images/index/5/5-4.jpg" alt="商品" class="product">
+                  </a>
+                </div>
+                <div class="pr1_text">
+                  <a href="#" class="pr1_text">
+                    <h4>毛毯</h4>
+                  </a>
+                  <span>材質:棉</span><br>
+                  <span>$399元</span>
+                </div>
               </div>
-              <div class="pr1_text">
-                <a href="#" class="pr1_text">
-                  <h4>毯子</h4>
-                </a>
-                <span>材質:絲質</span><br>
-                <span>$399元</span>
-              </div>
-            </div>
-
-            <div class="pr1">
-              <div class="pr1_img">
-                <a href="#">
-                  <img src="./images/index/5/5-5.jpg" alt="商品" class="product">
-                </a>
-              </div>
-              <div class="pr1_text">
-                <a href="#" class="pr1_text">
-                  <h4>收納盒</h4>
-                </a>
-                <span>材質:木頭</span><br>
-                <span>$399元</span>
-              </div>
-            </div>
-
-          </div>
-        </li>
-      </ul>
-      <a role="button" class="next1"><img src="./images/index/next1.png" alt=""></a>
-      <a role="button" class="next2"><img src="./images/index/next2.png" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button type="button">
+        <i class="fas fa-angle-right" id="next"></i>
+      </button>
     </div>
   </div>
-
   <footer>
     <div class="end">
       <div class="top">
@@ -348,22 +740,35 @@
         </a>
       </div>
 
-      <a href="./index.html">
-        <img src="./images/index/logo1.png" alt="LOGO">
-      </a>
-      <a href="#">更多資訊</a>
-			<a href="#">關於我們</a>
-			<a href="#">加入我們</a>
+      <div class="end_logo">
+        <a href="./index.html">
+          <img src="./images/index/logo1.png" alt="LOGO">
+        </a>
+      </div>
+
+      <div class="end_icon">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter-square"></i>
+      </div>
+      <!-- <a href="#">更多資訊</a>
+      <a href="#">關於我們</a>
+      <a href="#">加入我們</a> -->
       <hr>
       <p>
         本網站為緯育TibaMe前端設計工程師班專業技術養成班第72期學員專題作品，本平台僅供學習、展示之用
-				參考資源：ikea ｜ Pinterest 。若有侵權疑慮，您可私訊<a href="https://www.facebook.com/TibaMe/" target="_blank">TibaMe-前端設計工程師 養成班</a>，後續會由專人協助處理。
+        參考資源：ikea ｜ Pinterest 。若有侵權疑慮，您可私訊<a href="https://www.facebook.com/TibaMe/"
+          target="_blank">TibaMe-前端設計工程師養成班</a>，後續會由專人協助處理。
       </p>
       <p>
         Copyright © 2021 SIMPLE. All rights reserved
       </p>
     </div>
   </footer>
+
+  <script src="./js/header.js"></script>
+  <script src="./js/index.js"></script>
+  <script type="text/javascript" src="./vendors/slick/slick.js"></script>
 </body>
 
 </html>

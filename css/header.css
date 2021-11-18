@@ -1,35 +1,65 @@
-
 *{
   box-sizing: border-box;
 }
 
-/* header */
+/* ===== header ===== */
 header {
   /* border: 1px solid red; */
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1920px;
+  width: 100%;
+  height: 75px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
-/* 導覽列 */
+/* ===== 電腦版導覽列 ===== */
 nav.title {
-  /* border: 1px solid #CF9F72; */
+  /* border: 1px solid #292cce; */
   background: #bda68c;
-  width: 1200px;
-  /* height: 100px; */
-  /* position: fixed; */
-  margin: 0 auto;
-  /* position: relative; */
+  display: block;
+  max-width: 1920px;
+  width: 100%;
 }
-nav.title ul {
-  /* margin: 0; */
+
+nav.title ul.nav {
   font-size: 0;
-  /* height: 80px; */
-  padding: 15px;
+  height: 65px;
+  padding-top: 15px;
   padding-left: 50px;
-  /* line-height: 100px; */
-  /* position: absolute;
-  top:50%;
-  transform: translateY(-20%); */
+  z-index: 1;
+  float: right;
+}
+
+@media (min-width:992px) and (max-width: 1200px){
+  nav.title{
+    width: 100%;
+  }
+
+  nav.title ul.nav{
+    padding-left: 25px;
+  }
+}
+
+@media (min-width:768px) and (max-width: 992px){  
+  nav.title{
+    width: 100%;
+  }
+
+  nav.title ul.nav{
+    padding-left: 0px;
+  }
+
+  nav.title > div.logo > a.logo{
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  nav.title{
+    display: none;
+  }
 }
 
 nav.title li {
@@ -41,31 +71,50 @@ nav.title li {
   padding-right: 15px;
 }
 
-nav.title  a {
+nav.title a {
   color: inherit; /* 移除超連結顏色 */
   text-decoration: none; /* 移除超連結底線 */
   display: inline-block; /* 讓 <a> 填滿 <li> */
-  height: 40px;
   font-size: 20px;
   font-weight: bold;
-  padding: 5px;
-  
-  /* color: #184474; */
+  padding: 10px;
+  vertical-align: middle;
 }
 
-/* LOGO */
-/* li.logo{ 
-  /* margin-right: 250px; */
-  /* display: inline-block; 
+@media (max-width:991px) {
+  nav.title a {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+i.fa-chevron-down.-on{
+  display: none;
+}
+
+i.fa-chevron-up{
+  display: none;
   
-}*/
+}
+
+i.fa-chevron-up.-on{
+  display: inline;
+  transition: ease-in-out 2s;
+}
 
 
-nav.title a.logo {
-  margin: 0 auto;
-  /* display: inline-block; */
-  margin-right: 300px;
-  /* position: relative; */
+/* LOGO */
+div.logo{
+  display: inline-block;
+  height: 75px;
+}
+
+div.logo a.logo {
+  /* margin: 0 auto;*/
+  display: inline-block; 
+  /* margin-right: 250px; */
+  margin-top: 10px;
+  margin-left: 30px;
 }
 
 a.logo img {
@@ -79,9 +128,11 @@ a.logo img {
 /* search圖示 */
 div.srch {
   width: 100px;
+  /* background: seashell; */
   position: relative;
   vertical-align: middle;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 div.srch_img span.icon {
@@ -90,13 +141,14 @@ div.srch_img span.icon {
   position: absolute;
   top: 50%;
   transform: translateY(-46%);
-  z-index: 1;
+  z-index: 0;
 }
 
 input#search {
   border: 1px solid black;
   border-radius: 5px;
   width: 100px;
+  z-index: 1;
 }
 
 /* 會員 購物車 */
@@ -123,6 +175,8 @@ li.vs {
 div.menu {
   /* border: 1px solid blue; */
   position: relative;
+  cursor: pointer;
+  /* background: #bda68c; */
 }
 
 div.menu ul.menu_list {
@@ -130,25 +184,33 @@ div.menu ul.menu_list {
   padding: 0;
   /* margin-top: 10px; */
   list-style: none;
+  z-index: 5;
 
   position: absolute;
   top: 100%;
   display: none;
 }
 
+
+.menu.-on > ul.menu_list{
+  display: block;
+  background: rgb(255, 255, 255);
+  color: gray;
+}
+
 div.menu li {
   font-size: 0;
   padding: 0;
-  width: 50px;
+  width: 70px;
 }
 
 div.menu hr {
   width: 50%;
 }
 
-div.menu a.menu_list {
+div.menu a.menu_list1 {
   /* border: 1px solid red; */
-  width: 50px;
+  width: 70px;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 18px;
@@ -159,21 +221,24 @@ nav.title a.logo:hover{
   border: none;
 }
 
-nav.title a:hover {
+ul.nav li a:hover {
   color: white;
-  /* text-decoration:underline; */
-  /* border-bottom:1px solid white; */
+  background-color:rgb(135, 100, 100, 0.5);
 }
 
-
-
-div.menu:hover ul.menu_list {
-  background-color: rgb(255, 255, 255);
+/* div.menu:hover ul.menu_list {
+  background: rgb(255, 255, 255);
   color: gray;
   display: block;
+} */
+
+nav.title > ul.nav >  li > div.menu > ul.menu_list > li >a.menu_list1:hover {
+  background: rgb(189, 177, 163);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: none;
 }
 
-a.menu_list:hover {
-  background-color: rgb(135, 100, 100, 0.8);
+.menu:hover a > i {
+  color: rgb(236, 181, 61);
 }
-
