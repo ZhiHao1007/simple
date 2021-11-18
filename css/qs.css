@@ -197,7 +197,7 @@ div.speak{
 
 
 div.form {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   border-radius: 10px;
   width: 40%;
   text-align: left;
@@ -212,7 +212,7 @@ div.form h3 {
 }
 
 div.form > form {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   /* height: 200px; */
   display: inline-block;
   width: 100%;
@@ -258,29 +258,30 @@ div.form > form > button {
   border: 2px solid gray;
   border-radius: 5px;
   /* margin: 0 auto; */
-  margin-left: 50px;
+  margin-left: 15px;
   margin-bottom: 40px;
   cursor: pointer;
 }
 
 @media (max-width:991px) {
+  div.speak{
+    margin: 0 90px;
+  }
+
   div.form {
-    width: 70%;
+    width: 80%;
+    margin-bottom: 20px;
   }
 }
 
 /* message 聯絡資訊 */
 
 div.message {
-  border: 1px solid rgb(212, 168, 126);
-  /* display: inline-block; */
-  width: 30%;
-  /* margin-left: 40px; */
-  margin-right: 50px;
-  padding-right: 20px;
+  /* border: 1px solid rgb(212, 168, 126); */
+  width: 35%;
+  margin-top: 50px;
+  margin-right: 20px;
   padding-bottom: 20px;
-  /* position: absolute;
-  top: 30%; */
 }
 
 div.message h4 {
@@ -294,6 +295,24 @@ div.message ul {
 
 div.message > ul > li {
   margin: 10px;
+}
+
+@media (max-width:991px) {
+  div.message {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width:575.98px) {
+  div.message {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+  div.message > ul > li > span{
+    font-size: 14px;
+  }
 }
 
 /* 按鈕特效 */
