@@ -1,5 +1,19 @@
 
 $(document).ready(function () {
+  $('.pr_img_left').click(function(){
+    // console.log($(this));
+    let img_left = $(this).attr('id');
+    // console.log(img_left)
+
+    $('.pr_img_change').removeClass('-on');
+    $('.pr_img_change[data-id='+ img_left +']').addClass('-on');
+
+  });
+  
+  
+  
+  
+  
   let itemnum_el = document.getElementById("itemnum");
   document.getElementById("numAdd").addEventListener("click", addCount);
   document.getElementById("numSub").addEventListener("click", subCount);

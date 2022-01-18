@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+    <style>
+        #sel{
+            display: block;
+        }
+        #sel2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <select name="" id="sel" onchange="fuc1()">
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <select name="" id="sel2">
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+    </select>
+
+    <script>
+        function fuc1(){
+            let sel = document.getElementById('sel');
+            let sel2 = document.getElementById('sel2');
+
+            console.log(sel);
+
+            let aaa = $('select  option:selected').val();
+            console.log(aaa);
+            if(aaa == 3){
+                sel2.style.display = 'block';
+            }else{
+                sel2.style.display = 'none';
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

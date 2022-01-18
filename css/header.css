@@ -223,7 +223,7 @@ nav.title a.logo:hover{
 
 ul.nav li a:hover {
   color: white;
-  background-color:rgb(135, 100, 100, 0.5);
+  /* background-color:rgb(135, 100, 100, 0.5); */
 }
 
 /* div.menu:hover ul.menu_list {

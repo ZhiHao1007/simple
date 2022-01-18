@@ -19,7 +19,7 @@ nav.title1 > ul > li:nth-child(4) > a{
 }
 
 nav.title1 > ul > li > div.menu_1 > a.test:hover{
-  background-color: rgb(250, 242, 214);
+  /* background-color: rgb(250, 242, 214); */
 }
 
 /* main */
@@ -100,7 +100,7 @@ div > dt {
   margin: 0 auto;
 }
 
-div > dt > button {
+div > dt > .faq_item {
   background-color: rgb(228, 202, 178);
   width: 70%;
   /* border: none; */
@@ -124,22 +124,18 @@ div > dt > button {
 
 
 /* 解答 */
-div.pr1_a {
-  /* border: 1px solid gray; */
+div.ans_item {
+  border: 1px solid gray;
+  /* border-top: none; */
   width: 70%;
   margin: 0 auto;
-  max-height: 0;
-  overflow: hidden;
   padding: 10px 40px;
   text-align: left;
   letter-spacing: 1.5px;
-  
-  /* transition: max-height 0.2s ease-out; */
-  /* background-color: white; */
 }
 
-div.pr1_a.-on {
-  max-width: 200px;
+.ans_item.-on {
+  display: block;
 }
 
 
@@ -155,18 +151,18 @@ div.pr1_a.-on {
   bottom: 10px;
 } */
 
-div > dl > div > dt > button > div.add{
+div > dl > div > dt > .faq_item > img{
   /* float: right; */
   position: absolute;
   right: 15px;
 }
 
-div > dl > div > dt > button > div.sub{
-  /* float: right; */
+/* div > dl > div > dt > .faq_item > div.sub{
+  float: right;
   position: absolute;
   right: 15px;
   display: none;
-}
+} */
 
 div.add.-on{
   display: none;

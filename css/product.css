@@ -45,6 +45,15 @@ div.product {
   justify-content: space-around;
 }
 
+img.pr_img_change.-on{
+  display: block;
+}
+
+img.pr_img_change{
+  display: none;
+}
+
+
 /* 縮圖上下按鈕 */
 button.up{
   border: 1px solid rgb(173, 173, 173);

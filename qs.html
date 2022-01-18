@@ -155,12 +155,11 @@
 				<dl>
 					<div class="pr1">
 						<dt>
-							<button class="coll" type="button">
+							<div class="faq_item">
 								<span>1. 要如何退換貨?</span>
-								<div class="add"><i class="fas fa-plus"></i></div>
-								<div class="sub"><i class="fas fa-minus"></i></div>
-							</button>
-							<div class="pr1_a">
+								<img src="./images/qs/add.png" class="open-close">	
+							</div>
+							<div class="ans_item" style="display: none;">
 								<p>
 									如果你對於購買的產品不滿意，你可在 7 天內，攜帶完好的商品，來店退貨。
 									<br>
@@ -172,12 +171,11 @@
 
 					<div class="pr1">
 						<dt>
-							<button class="coll" type="button">
-								<span>2. 如何得知有沒有現貨?</span>
-								<div class="add"><i class="fas fa-plus"></i></div>
-								<div class="sub"><i class="fas fa-minus"></i></div>
-							</button>
-							<div class="pr1_a">
+							<div class="faq_item">
+									<span>2. 如何得知有沒有現貨?</span>
+									<img src="./images/qs/add.png" class="open-close">	
+							</div>
+							<div class="ans_item" style="display: none;">
 								<p>
 									點入商品的詳細介紹頁面後，可以使用查詢貨況功能確認想購買商品之貨況。
 									<br>
@@ -189,12 +187,11 @@
 
 					<div class="pr1">
 						<dt>
-							<button class="coll" type="button">
+							<div class="faq_item">
 								<span>3. 可以預購缺貨商品嗎?</span>
-								<div class="add"><i class="fas fa-plus"></i></div>
-								<div class="sub"><i class="fas fa-minus"></i></div>
-							</button>
-							<div class="pr1_a">
+								<img src="./images/qs/add.png" class="open-close">	
+							</div>
+							<div class="ans_item" style="display: none;">
 								<p>
 									我們可以為你登記貨到通知，請留下姓名、電話、商品名稱。
 									<br>
@@ -211,12 +208,11 @@
 				<dl>
 					<div class="pr1">
 						<dt>
-							<button class="coll" type="button">
+							<div class="faq_item">
 								<span>1. 提供何種運送服務?</span>
-								<div class="add"><i class="fas fa-plus"></i></div>
-								<div class="sub"><i class="fas fa-minus"></i></div>
-							</button>
-							<div class="pr1_a">
+								<img src="./images/qs/add.png" class="open-close">	
+							</div>
+							<div class="ans_item" style="display: none;">
 								<p>
 									如果你對於購買的產品不滿意，你可在 7 天內，攜帶完好的商品，來店退貨。
 									<br>
@@ -228,12 +224,11 @@
 
 					<div class="pr1">
 						<dt>
-							<button class="coll" type="button">
+							<div class="faq_item">
 								<span>2. 如何更改日期與時間?</span>
-								<div class="add"><i class="fas fa-plus"></i></div>
-								<div class="sub"><i class="fas fa-minus"></i></div>
-							</button>
-							<div class="pr1_a">
+								<img src="./images/qs/add.png" class="open-close">	
+							</div>
+							<div class="ans_item" style="display: none;">
 								<p>
 									如果你對於購買的產品不滿意，你可在 7 天內，攜帶完好的商品，來店退貨。
 									<br>
@@ -245,12 +240,11 @@
 
 					<div class="pr1">
 						<dt>
-							<button class="coll" type="button">
+							<div class="faq_item">
 								<span>3. 提供產品組裝服務嗎?</span>
-								<div class="add"><i class="fas fa-plus"></i></div>
-								<div class="sub"><i class="fas fa-minus"></i></div>
-							</button>
-							<div class="pr1_a">
+								<img src="./images/qs/add.png" class="open-close">	
+							</div>
+							<div class="ans_item" style="display: none;">
 								<p>
 									如果你對於購買的產品不滿意，你可在 7 天內，攜帶完好的商品，來店退貨。
 									<br>
@@ -345,7 +339,46 @@
 		</div>
 	</footer>
 
-	<script src="./js/qs.js"></script>
+	<script>
+		let qaItem = document.getElementsByClassName('faq_item');
+		// console.log(qaItem);
+
+		for(let i = 0; i < qaItem.length; i++){
+			const qa_el = qaItem[i];
+			qa_el.addEventListener('click', OpenAns)
+		}
+
+		function OpenAns(event){
+			SwitchIcon(event);
+			SwitchContent(event);
+		}
+
+		function SwitchIcon(event){
+			const img =  event.target.querySelector('.open-close');
+			
+			let imgSrc = img.src;
+			if(imgSrc.indexOf('add') != -1){
+				img.src = './images/qs/minus.png';
+			}else{
+				img.src = './images/qs/add.png';
+			}
+		}
+
+		function SwitchContent(event){
+			const ansItem  = event.target.nextElementSibling;
+
+			if (ansItem.style.display == "none") {
+				ansItem.style.display = "";
+			} else {
+				ansItem.style.display = "none";
+			}
+
+		}
+
+
+
+
+	</script>
 </body>
 
 </html>
