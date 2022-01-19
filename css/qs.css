@@ -4,11 +4,9 @@
 
 body {
   margin: 0;
-  /* font-family: 'Noto Sans TC', sans-serif; */
 }
 
 header > nav.title > ul > li:nth-child(4) > a {
-  /* border: 2px solid rgb(117, 61, 23); */
   border-radius: 5px;
   background-color: rgb(135, 100, 100, 0.5);
   color: white;
@@ -16,10 +14,6 @@ header > nav.title > ul > li:nth-child(4) > a {
 
 nav.title1 > ul > li:nth-child(4) > a{
   background-color: rgb(250, 242, 214);
-}
-
-nav.title1 > ul > li > div.menu_1 > a.test:hover{
-  /* background-color: rgb(250, 242, 214); */
 }
 
 /* main */
@@ -35,18 +29,17 @@ div.qs_icon{
   /* border: 1px solid black; */
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 
 /* ul.FAQ  問答SVG*/
 ul.FAQ {
   /* border: 1px solid blue; */
-  display: flex;
-  justify-content: center;
   font-size: 0;
   
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-top: 70px;
+  margin-bottom: 40px;
 }
 
 ul.FAQ img {
@@ -55,23 +48,46 @@ ul.FAQ img {
   /* border:1px solid gray; */
 }
 
+
 ul.FAQ  > li {
   list-style: none; /* 移除項目符號 */
   display: inline-block;
   /* margin-right: 100px; */
-  margin: 10px 50px;
+  margin: 10px 100px;
+  text-align: center;
 }
 
-ul.FAQ > li > a {
-  font-size: 24px;
-  color: inherit; /* 移除超連結顏色 */
-  text-decoration: none; /* 移除超連結底線 */
-  display: inline-block; /* 讓 <a> 填滿 <li> */
-}
-
-ul.FAQ > li > a > h5 {
+ul.FAQ > li > h5 {
+  font-size: 20px;
   margin: 0 auto;
   text-align: center;
+}
+
+@media screen and (max-width: 991.98px){
+    ul.FAQ img{
+      width: 80px;
+      height: 80px;
+    }
+    ul.FAQ  > li {
+      list-style: none; /* 移除項目符號 */
+      display: inline-block;
+      margin: 10px 60px;
+    }
+}
+
+@media screen and (max-width: 575.98px){
+  ul.FAQ img{
+    width: 50px;
+    height: 50px;
+  }
+  
+  ul.FAQ  > li {
+    margin: 10px 30px;
+  }
+
+  ul.FAQ > li > h5 {
+    font-size: 16px;
+  }
 }
 
 /* 問題 */
@@ -80,12 +96,14 @@ div.pr{
   width: 80%;
   margin: 0 auto;
 }
+
 div.pr h4 {
   /* border: 1px solid gray; */
   font-size: 18px;
   font-weight: bold;
-  width: 70%;
-  margin: 0 auto;
+  position: relative;
+  left: 10%;
+  margin: 20 auto;
   /* margin-top: 40px; */
 }
 
@@ -102,7 +120,7 @@ div > dt {
 
 div > dt > .faq_item {
   background-color: rgb(228, 202, 178);
-  width: 70%;
+  width: 80%;
   /* border: none; */
   border: 1px solid gray;
   display: flex;
@@ -116,20 +134,15 @@ div > dt > .faq_item {
   position: relative;
 }
 
-@media (max-width:767.98px) {
-  div > dt > button {
-    font-size: 16px;
-  }
-}
 
 
 /* 解答 */
 div.ans_item {
   border: 1px solid gray;
   /* border-top: none; */
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
-  padding: 10px 40px;
+  padding: 10px 20px;
   text-align: left;
   letter-spacing: 1.5px;
 }
@@ -138,31 +151,12 @@ div.ans_item {
   display: block;
 }
 
-
-/* 加號 */
-
-/* div > dl > div > dt > button.coll::after {
-  content: "\002B";
-  color: rgba(20, 20, 20, 0.4);
-  margin-left: 5px;
-  font-size: 35px;
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-} */
-
-div > dl > div > dt > .faq_item > img{
+/* 加號減號 */
+div > div > dt > .faq_item > img{
   /* float: right; */
   position: absolute;
   right: 15px;
 }
-
-/* div > dl > div > dt > .faq_item > div.sub{
-  float: right;
-  position: absolute;
-  right: 15px;
-  display: none;
-} */
 
 div.add.-on{
   display: none;
@@ -172,8 +166,39 @@ div.sub.-on{
   display: block;
 }
 
+@media screen and (max-width:767.98px) {
+  div.pr h4 {
+    font-size: 18px;
+    /* width: 90%; */
+    left: 5%;
+  }
+  div > dt > .faq_item {
+    font-size: 16px;
+    width: 90%;
+  }
+  div.ans_item {
+    font-size: 16px;
+    width: 90%;
+  }
+}
 
-
+@media screen and (max-width:575.98px) {
+  div.pr h4 {
+    font-size: 16px;
+    left: 0;
+  }
+  div > dt > .faq_item {
+    font-size: 14px;
+    width: 100%;
+  }
+  div > dt > .faq_item > img {
+    width: 18px;
+  }
+  div.ans_item {
+    font-size: 14px;
+    width: 100%;
+  }
+}
 
 /* 分隔線 */
 div.main hr {
@@ -188,7 +213,7 @@ div.speak{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 0 150px;
+  margin: 0 80px;
 }
 
 
@@ -208,8 +233,6 @@ div.form h3 {
 }
 
 div.form > form {
-  /* border: 1px solid black; */
-  /* height: 200px; */
   display: inline-block;
   width: 100%;
   margin: 0 auto;
@@ -261,12 +284,27 @@ div.form > form > button {
 
 @media (max-width:991px) {
   div.speak{
-    margin: 0 90px;
+    margin: 0 70px;
   }
 
   div.form {
     width: 80%;
     margin-bottom: 20px;
+  }
+}
+
+
+@media (max-width:576.98px) {
+  div.speak{
+    margin: 0 30px;
+  }
+
+  div.form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  div.form > form{
+    padding-left: 30px;
   }
 }
 
@@ -278,6 +316,7 @@ div.message {
   margin-top: 100px;
   margin-right: 20px;
   padding-bottom: 20px;
+  text-align: left;
 }
 
 div.message h4 {
